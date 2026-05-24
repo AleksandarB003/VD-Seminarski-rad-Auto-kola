@@ -112,7 +112,7 @@ function ucitajPodesavanja() {
 // ANIMACIJA ULAZA — scroll
 // -------------------------------------------------------
 
-function provjeriAnimacije() {
+function proveriAnimacije() {
     var elementi = document.querySelectorAll('.animacija-ulaz');
     elementi.forEach(function (el) {
         var pozicija = el.getBoundingClientRect().top;
@@ -149,8 +149,8 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     ucitajPodesavanja();
-    provjeriAnimacije();
+    proveriAnimacije();
     resetujTajmer();
 });
 
-window.addEventListener('scroll', provjeriAnimacije);
+window.addEventListener('scroll', proveriAnimacije);
