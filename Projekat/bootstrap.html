@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="sr" data-tema="svetla">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autoškola Uroš Pualić Inđija — cenovnik kurseva i paketi obuke.">
+    <meta name="keywords" content="cenovnik autoškola Inđija, paketi obuke, vozački kurs cena">
+    <meta property="og:title" content="Cenovnik — Autoškola Uroš Pualić">
+    <meta property="og:description" content="Transparentne cene bez skrivenih troškova. Plaćanje na rate.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sr_RS">
+    <title>Cenovnik — Autoškola Uroš Pualić</title>
+    <link rel="icon" type="image/png" href="slike/ikonica.png">
+    <link rel="stylesheet" href="biblioteke/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+
+<body>
+
+    <div class="pristupacnost-traka">
+        <button onclick="promeniTemu()" id="dugme-tema">Tamna tema</button>
+        <button onclick="povecajFont()">A+</button>
+        <button onclick="smanjiFont()">A-</button>
+    </div>
+
+    <!-- NAVIGACIJA -->
+    <nav class="navigacija">
+        <div class="logo">
+            <img src="slike/ikonica.png" alt="Logo autoškole Uroš Pualić">
+            <span>UROŠ PUALIĆ</span>
+        </div>
+
+        <ul class="nav-linkovi" id="navLinkovi">
+            <li><a href="index.html">Početna</a></li>
+            <li class="ima-podmeni">
+                <a href="usluge.html">Kategorije ▾</a>
+                <ul class="podmeni">
+                    <li><a href="usluge.html#kategorija-b">Kategorija B</a></li>
+                    <li><a href="usluge.html#kategorija-c">Kategorija C</a></li>
+                    <li><a href="usluge.html#kategorija-d">Kategorija D</a></li>
+                    <li><a href="usluge.html#kategorija-a">Kategorija A</a></li>
+                </ul>
+            </li>
+            <li><a href="oNama.html">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bootstrap.html" class="aktivan">Cenovnik</a></li>
+        </ul>
+
+        <div class="nav-desno">
+            <button id="dugme-jezik" onclick="promeniJezik()" style="background:none; border:1px solid rgba(255,255,255,0.4);
+                color:#fff; padding:6px 14px; border-radius:6px;
+                cursor:pointer; font-size:0.85rem;">
+                EN
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleMeni()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-razmak"></div>
+
+    <!-- HERO — BOOTSTRAP -->
+    <div class="py-5" style="background-color: var(--pozadina-nav);">
+        <div class="container text-center py-4">
+            <h1 class="display-3 fw-bold mb-3" style="color: #ffffff;">Cenovnik</h1>
+            <p class="lead text-white-50">Transparentne cene bez skrivenih troškova</p>
+        </div>
+    </div>
+
+    <!-- PAKETI — BOOTSTRAP KARTICE -->
+    <div class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 text-center">
+                <h2 class="display-6 fw-bold mb-2">Izaberite paket</h2>
+                <p style="color: var(--tekst-sivi);">Svi paketi uključuju teorijsku obuku i pripremu za ispit</p>
+                <hr class="w-25 mx-auto border-danger border-2 opacity-100">
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- OSNOVNO -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-secondary text-white text-center py-3">
+                        <h5 class="card-title mb-0 fw-bold">Osnovno</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-center mb-4">
+                            <span class="display-5 fw-bold text-danger">68.000</span>
+                            <span class="text-muted fs-6"> RSD</span>
+                        </div>
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Teorijska nastava
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                40 časova vožnje
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Priprema za ispit
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-muted">&#10007;</span>
+                                <span class="text-muted">Dodatni časovi</span>
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-muted">&#10007;</span>
+                                <span class="text-muted">Plaćanje na rate</span>
+                            </li>
+                        </ul>
+                        <a href="kontakt.html" class="btn btn-outline-danger mt-3 w-100 fw-bold">
+                            Prijavi se
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STANDARD — ISTAKNUTO -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow border-danger border-2">
+                    <div class="card-header bg-danger text-white text-center py-3 position-relative">
+                        <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle">
+                            Najpopularnije
+                        </span>
+                        <h5 class="card-title mb-0 fw-bold mt-1">Standard</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-center mb-4">
+                            <span class="display-5 fw-bold text-danger">85.000</span>
+                            <span class="text-muted fs-6"> RSD</span>
+                        </div>
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Teorijska nastava
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                50 časova vožnje
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Priprema za ispit
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                5 dodatnih časova
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-muted">&#10007;</span>
+                                <span class="text-muted">Plaćanje na rate</span>
+                            </li>
+                        </ul>
+                        <a href="kontakt.html" class="btn btn-danger mt-3 w-100 fw-bold">
+                            Prijavi se
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREMIUM -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-header bg-dark text-white text-center py-3">
+                        <h5 class="card-title mb-0 fw-bold">Premium</h5>
+                    </div>
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="text-center mb-4">
+                            <span class="display-5 fw-bold text-danger">130.000</span>
+                            <span class="text-muted fs-6"> RSD</span>
+                        </div>
+                        <ul class="list-unstyled flex-grow-1">
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Teorijska nastava
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Neograničeni časovi
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Priprema za ispit
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Dodatni časovi uključeni
+                            </li>
+                            <li class="mb-2 d-flex align-items-center gap-2">
+                                <span class="text-success fw-bold">&#10003;</span>
+                                Plaćanje na rate
+                            </li>
+                        </ul>
+                        <a href="kontakt.html" class="btn btn-outline-danger mt-3 w-100 fw-bold">
+                            Prijavi se
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TABELA KATEGORIJA — BOOTSTRAP -->
+    <div class="py-5" style="background-color: var(--pozadina);">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="display-6 fw-bold mb-2">Pregled cena po kategorijama</h2>
+                    <hr class="w-25 mx-auto border-danger border-2 opacity-100">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="table-responsive shadow-sm rounded">
+                        <table class="table table-hover table-bordered mb-0 bg-white">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col" class="py-3">Kategorija</th>
+                                    <th scope="col" class="py-3">Min. starost</th>
+                                    <th scope="col" class="py-3">Trajanje</th>
+                                    <th scope="col" class="py-3">Cena od</th>
+                                    <th scope="col" class="py-3">Prijava</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold align-middle">Kategorija B</td>
+                                    <td class="align-middle">17 godina</td>
+                                    <td class="align-middle">2–3 meseca</td>
+                                    <td class="align-middle text-danger fw-bold">111.000 RSD</td>
+                                    <td class="align-middle">
+                                        <a href="kontakt.html" class="btn btn-sm btn-danger">
+                                            Prijavi se
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold align-middle">Kategorija C</td>
+                                    <td class="align-middle">21 godina</td>
+                                    <td class="align-middle">1–2 meseca</td>
+                                    <td class="align-middle text-danger fw-bold">90.000 RSD</td>
+                                    <td class="align-middle">
+                                        <a href="kontakt.html" class="btn btn-sm btn-danger">
+                                            Prijavi se
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold align-middle">Kategorija D</td>
+                                    <td class="align-middle">24 godine</td>
+                                    <td class="align-middle">2–3 meseca</td>
+                                    <td class="align-middle text-danger fw-bold">75.000 RSD</td>
+                                    <td class="align-middle">
+                                        <a href="kontakt.html" class="btn btn-sm btn-danger">
+                                            Prijavi se
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold align-middle">Kategorija A</td>
+                                    <td class="align-middle">24 godine</td>
+                                    <td class="align-middle">1–2 meseca</td>
+                                    <td class="align-middle text-danger fw-bold">35.000 RSD</td>
+                                    <td class="align-middle">
+                                        <a href="kontakt.html" class="btn btn-sm btn-danger">
+                                            Prijavi se
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold align-middle">Kategorija A2</td>
+                                    <td class="align-middle">18 godina</td>
+                                    <td class="align-middle">1 mesec</td>
+                                    <td class="align-middle text-danger fw-bold">25.000 RSD</td>
+                                    <td class="align-middle">
+                                        <a href="kontakt.html" class="btn btn-sm btn-danger">
+                                            Prijavi se
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ČESTA PITANJA — BOOTSTRAP ACCORDION -->
+    <div class="container py-5">
+        <div class="row justify-content-center mb-4">
+            <div class="col-12 text-center">
+                <h2 class="display-6 fw-bold mb-2">Česta pitanja</h2>
+                <hr class="w-25 mx-auto border-danger border-2 opacity-100">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="accordion shadow-sm" id="cestaPitanja">
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pitanje1">
+                                Šta je potrebno za upis u autoškolu?
+                            </button>
+                        </h2>
+                        <div id="pitanje1" class="accordion-collapse collapse show" data-bs-parent="#cestaPitanja">
+                            <div class="accordion-body text-muted">
+                                Za upis su potrebni lična karta, lekarsko uverenje o zdravstvenoj
+                                sposobnosti za upravljanje vozilom i fotografija. Sve ostalo
+                                rešavamo zajedno sa vama.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pitanje2">
+                                Da li je moguće plaćanje na rate?
+                            </button>
+                        </h2>
+                        <div id="pitanje2" class="accordion-collapse collapse" data-bs-parent="#cestaPitanja">
+                            <div class="accordion-body text-muted">
+                                Da, u okviru Premium paketa plaćanje na rate je uključeno.
+                                Za ostale pakete kontaktirajte nas i dogovorićemo individualne
+                                uslove plaćanja.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pitanje3">
+                                Koliko traje obuka za kategoriju B?
+                            </button>
+                        </h2>
+                        <div id="pitanje3" class="accordion-collapse collapse" data-bs-parent="#cestaPitanja">
+                            <div class="accordion-body text-muted">
+                                Teorijska nastava traje oko mesec dana, a praktična obuka
+                                (vožnja) zavisi od tempa polaznika. Prosečno trajanje celog
+                                kursa je 2 do 3 meseca.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2 rounded overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#pitanje4">
+                                Kada se mogu prijaviti za ispit?
+                            </button>
+                        </h2>
+                        <div id="pitanje4" class="accordion-collapse collapse" data-bs-parent="#cestaPitanja">
+                            <div class="accordion-body text-muted">
+                                Nakon uspešno završene teorijske nastave i minimalnog broja
+                                časova vožnje, instruktor procenjuje spremnost polaznika i
+                                dogovara termin ispita.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POZIV NA AKCIJU — BOOTSTRAP -->
+    <div class="bg-danger text-white py-5">
+        <div class="container text-center py-3">
+            <h2 class="display-6 fw-bold mb-3">Spreman za prvi korak?</h2>
+            <p class="lead mb-4 opacity-75">
+                Kontaktiraj nas danas i zakaži besplatne konsultacije.
+            </p>
+            <a href="kontakt.html" class="btn btn-light btn-lg fw-bold px-5">
+                Kontaktiraj nas
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-mreza">
+            <div>
+                <h4>Autoškola Uroš Pualić</h4>
+                <p>Profesionalna obuka vozača u Inđiji od 2003. godine.</p>
+            </div>
+            <div>
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="usluge.html">Kategorije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Lička 36, Inđija</p>
+                <p>+381 62 207 736</p>
+                <p>info@autoskolapualic.rs</p>
+            </div>
+        </div>
+        <div class="footer-dno">
+            <p>© 2024 Autoškola Uroš Pualić. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteke/bootstrap.bundle.min.js"></script>
+    <script src="biblioteke/jquery-4.0.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jezik.js"></script>
+</body>
+
+</html>

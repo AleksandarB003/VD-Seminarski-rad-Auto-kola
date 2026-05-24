@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../../public/fontovi/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../public/fontovi/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../public/fontovi/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../public/fontovi/Nunito-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pozadina: #f5f6fa;
+  --pozadina-kartica: #ffffff;
+  --pozadina-nav: #1a1a2e;
+  --tekst-glavni: #1a1a2e;
+  --tekst-svetli: #ffffff;
+  --tekst-sivi: #555e6e;
+  --akcenat: #e63946;
+  --ivica: #dde1ea;
+  --senka: rgba(0, 0, 0, 0.10);
+}
+
+[data-tema="tamna"] {
+  --pozadina: #0f0f1a;
+  --pozadina-kartica: #1a1a2e;
+  --pozadina-nav: #0a0a14;
+  --tekst-glavni: #e8eaf0;
+  --tekst-svetli: #ffffff;
+  --tekst-sivi: #9aa0b0;
+  --akcenat: #e63946;
+  --ivica: #2a2a40;
+  --senka: rgba(0, 0, 0, 0.40);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--pozadina);
+  color: var(--tekst-glavni);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: var(--akcenat);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #c1121f;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: var(--tekst-glavni);
+}
+
+p {
+  color: var(--tekst-sivi);
+}

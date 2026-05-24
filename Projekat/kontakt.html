@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sr" data-tema="svetla">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kontaktirajte autoškolu Uroš Pualić u Inđiji. Lička 36. Prijavite se za vozački kurs.">
+    <meta name="keywords" content="kontakt autoškola Inđija, prijava vozački kurs, Lička 36, Uroš Pualić">
+    <meta property="og:title" content="Kontakt — Autoškola Uroš Pualić">
+    <meta property="og:description" content="Kontaktirajte nas. Lička 36, Inđija. +381 XX XXX XXXX.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sr_RS">
+    <title>Kontakt — Autoškola Uroš Pualić</title>
+    <link rel="icon" type="image/png" href="slike/ikonica.png">
+    <link rel="stylesheet" href="css/stil.css">
+    <link rel="stylesheet" href="biblioteke/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="pristupacnost-traka">
+        <button onclick="promeniTemu()" id="dugme-tema">Tamna tema</button>
+        <button onclick="povecajFont()">A+</button>
+        <button onclick="smanjiFont()">A-</button>
+    </div>
+
+    <nav class="navigacija">
+        <div class="logo">
+            <img src="slike/ikonica.png" alt="Logo autoškole Uroš Pualić">
+            <span>UROŠ PUALIĆ</span>
+        </div>
+
+        <ul class="nav-linkovi" id="navLinkovi">
+            <li><a href="index.html">Početna</a></li>
+            <li class="ima-podmeni">
+                <a href="usluge.html">Kategorije ▾</a>
+                <ul class="podmeni">
+                    <li><a href="usluge.html#kategorija-b">Kategorija B</a></li>
+                    <li><a href="usluge.html#kategorija-c">Kategorija C</a></li>
+                    <li><a href="usluge.html#kategorija-d">Kategorija D</a></li>
+                    <li><a href="usluge.html#kategorija-a">Kategorija A</a></li>
+                </ul>
+            </li>
+            <li><a href="oNama.html">O nama</a></li>
+            <li><a href="kontakt.html" class="aktivan">Kontakt</a></li>
+            <li><a href="bootstrap.html">Cenovnik</a></li>
+        </ul>
+
+        <div class="nav-desno">
+            <button id="dugme-jezik" onclick="promeniJezik()" style="background:none; border:1px solid rgba(255,255,255,0.4);
+                color:#fff; padding:6px 14px; border-radius:6px;
+                cursor:pointer; font-size:0.85rem;">
+                EN
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleMeni()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-razmak"></div>
+
+    <!-- HERO STRANICE -->
+    <section style="
+        background: linear-gradient(135deg, var(--pozadina-nav) 0%, #2d2d4e 100%);
+        padding: 80px 40px;
+        text-align: center;">
+        <h1 style="font-size: clamp(2.4rem, 5vw, 4rem); color: #ffffff; margin-bottom: 16px;"
+            data-kljuc="kontaktNaslov">
+            Kontaktirajte nas
+        </h1>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1.1rem;" data-kljuc="kontaktPodnaslov">
+            Tu smo za sva vaša pitanja
+        </p>
+    </section>
+
+    <!-- KONTAKT SEKCIJA -->
+    <section class="sekcija animacija-ulaz">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 56px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;">
+
+            <!-- LEVA STRANA — INFO -->
+            <div>
+                <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--tekst-glavni);">Informacije</h2>
+                <div class="linija" style="margin: 0 0 32px 0;"></div>
+
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+
+                    <div style="
+                        background-color: var(--pozadina-kartica);
+                        border: 1px solid var(--ivica);
+                        border-radius: 12px;
+                        padding: 24px;
+                        border-left: 4px solid var(--akcenat);">
+                        <h4 style="color: var(--tekst-glavni); margin-bottom: 8px; font-size: 1rem;">Adresa</h4>
+                        <p>Lička 36, Inđija</p>
+                    </div>
+
+                    <div style="
+                        background-color: var(--pozadina-kartica);
+                        border: 1px solid var(--ivica);
+                        border-radius: 12px;
+                        padding: 24px;
+                        border-left: 4px solid var(--akcenat);">
+                        <h4 style="color: var(--tekst-glavni); margin-bottom: 8px; font-size: 1rem;">Telefon</h4>
+                        <p><a href="tel:+38162207736">+381 62 207 736</a></p>
+                    </div>
+
+                    <div style="
+                        background-color: var(--pozadina-kartica);
+                        border: 1px solid var(--ivica);
+                        border-radius: 12px;
+                        padding: 24px;
+                        border-left: 4px solid var(--akcenat);">
+                        <h4 style="color: var(--tekst-glavni); margin-bottom: 8px; font-size: 1rem;">Email</h4>
+                        <p><a href="mailto:info@autoskolapualic.rs">info@autoskolapualic.rs</a></p>
+                    </div>
+
+                    <div style="
+                        background-color: var(--pozadina-kartica);
+                        border: 1px solid var(--ivica);
+                        border-radius: 12px;
+                        padding: 24px;
+                        border-left: 4px solid var(--akcenat);">
+                        <h4 style="color: var(--tekst-glavni); margin-bottom: 8px; font-size: 1rem;">Radno vreme</h4>
+                        <p>Ponedeljak — Petak: 08:00 — 16:00</p>
+                        <p>Subota: 09:00 — 13:00</p>
+                        <p>Nedelja: Zatvoreno</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DESNA STRANA — FORMA -->
+            <div class="forma-omotac" style="margin: 0;">
+                <h2 style="font-size: 1.8rem; margin-bottom: 8px; color: var(--tekst-glavni);">
+                    Pošaljite upit
+                </h2>
+                <p style="margin-bottom: 32px; font-size: 0.95rem;">
+                    Popunite formular i odgovorićemo vam u najkraćem roku.
+                </p>
+
+                <div class="forma-red">
+                    <div class="polje" id="polje-prezime">
+                        <label for="prezime" data-kljuc="formaPrezime">Prezime</label>
+                        <input type="text" id="prezime" name="prezime" placeholder="Vaše prezime" required>
+                        <span class="greska" id="greska-prezime" data-kljuc="greska-prezime">
+                            Prezime mora sadržati samo slova (min. 2 karaktera).
+                        </span>
+                    </div>
+
+                    <div class="polje" id="polje-ime">
+                        <label for="ime" data-kljuc="formaIme">Ime</label>
+                        <input type="text" id="ime" name="ime" placeholder="Vaše ime" required>
+                        <span class="greska" id="greska-ime" data-kljuc="greska-ime">
+                            Ime mora sadržati samo slova (min. 2 karaktera).
+                        </span>
+                    </div>
+                </div>
+
+                <div class="polje" id="polje-email">
+                    <label for="email" data-kljuc="formaEmail">Email adresa</label>
+                    <input type="email" id="email" name="email" placeholder="primer@email.com" required>
+                    <span class="greska" id="greska-email" data-kljuc="greska-email">
+                        Unesite ispravnu email adresu.
+                    </span>
+                </div>
+
+                <div class="polje" id="polje-telefon">
+                    <label for="telefon" data-kljuc="formaTelefon">Broj telefona</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="060 1234567" required>
+                    <span class="greska" id="greska-telefon" data-kljuc="greska-telefon">
+                        Telefon mora sadržati samo brojeve (min. 6 cifara).
+                    </span>
+                </div>
+
+                <div class="polje" id="polje-kategorija">
+                    <label for="kategorija" data-kljuc="formaKategorija">Kategorija</label>
+                    <select id="kategorija" name="kategorija" required>
+                        <option value="">— Izaberite kategoriju —</option>
+                        <option value="B">Kategorija B</option>
+                        <option value="C">Kategorija C</option>
+                        <option value="D">Kategorija D</option>
+                        <option value="A">Kategorija A</option>
+                        <option value="A2">Kategorija A2</option>
+                    </select>
+                </div>
+
+                <div class="polje" id="polje-poruka">
+                    <label for="poruka" data-kljuc="formaPoruka">Poruka</label>
+                    <textarea id="poruka" name="poruka" placeholder="Napišite vašu poruku ili pitanje..."
+                        required></textarea>
+                    <span class="greska" id="greska-poruka" data-kljuc="greska-poruka">
+                        Poruka mora imati najmanje 10 karaktera.
+                    </span>
+                </div>
+
+                <button type="button" class="forma-dugme" onclick="validirajFormu()" data-kljuc="formaPosalji">
+                    Pošalji poruku
+                </button>
+
+                <div id="uspesna-poruka" style="
+                    display: none;
+                    margin-top: 20px;
+                    background-color: #d4edda;
+                    color: #155724;
+                    border: 1px solid #c3e6cb;
+                    border-radius: 8px;
+                    padding: 16px;
+                    text-align: center;
+                    font-weight: 600;">
+                    Poruka je uspešno poslata! Odgovorićemo vam u najkraćem roku.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+    <section class="sekcija sekcija-siva animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2 style="color: var(--tekst-glavni);" data-kljuc="mapaNaslov">Gde se nalazimo</h2>
+            <p data-kljuc="mapaPodnaslov">Posetite nas u Inđiji</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="video-omotac">
+            <<iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467.457035945067!2d20.070834907753174!3d45.055277194860345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475af8cbee25b8d1%3A0x6009dface9938cc3!2zTGnEjWthIDM2LCBJbsSRaWphIDIyMzIw!5e1!3m2!1sen!2srs!4v1779446740023!5m2!1sen!2srs"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-mreza">
+            <div>
+                <h4>Autoškola Uroš Pualić</h4>
+                <p>Profesionalna obuka vozača u Inđiji od 2003. godine.</p>
+            </div>
+            <div>
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="usluge.html">Kategorije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Lička 36, Inđija</p>
+                <p>+381 62 207 736</p>
+                <p>info@autoskolapualic.rs</p>
+            </div>
+        </div>
+        <div class="footer-dno">
+            <p>© 2024 Autoškola Uroš Pualić. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteke/jquery-4.0.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jezik.js"></script>
+    <script src="js/validacija.js"></script>
+</body>
+
+</html>

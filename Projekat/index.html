@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sr" data-tema="svetla">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Autoškola Uroš Pualić - profesionalna obuka vozača u Pančevu. Kategorije B, C, D. Iskusni instruktori, moderna vozila.">
+    <meta name="keywords" content="autoškola, Pančevo, vozačka dozvola, obuka vozača, kategorija B, Uroš Pualić">
+    <meta property="og:title" content="Autoškola Uroš Pualić — Početna">
+    <meta property="og:description"
+        content="Profesionalna obuka vozača u Inđiji. Iskusni instruktori, moderna vozila, visok procenat prolaznosti.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sr_RS">
+    <title>Autoškola Uroš Pualić</title>
+    <link rel="icon" type="image/png" href="slike/ikonica.png">
+    <link rel="stylesheet" href="css/stil.css">
+    <link rel="stylesheet" href="biblioteke/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- PRISTUPAČNOST -->
+    <div class="pristupacnost-traka">
+        <button onclick="promeniTemu()" id="dugme-tema">🌙 Tamna</button>
+        <button onclick="povecajFont()">A+</button>
+        <button onclick="smanjiFont()">A-</button>
+    </div>
+
+    <!-- NAVIGACIJA -->
+    <nav class="navigacija">
+        <div class="logo">
+            <img src="slike/ikonica.png" alt="Logo autoškole Uroš Pualić">
+            <span>UROŠ PUALIĆ</span>
+        </div>
+
+        <ul class="nav-linkovi" id="navLinkovi">
+            <li><a href="index.html" class="aktivan">Početna</a></li>
+            <li class="ima-podmeni">
+                <a href="usluge.html">Kategorije ▾</a>
+                <ul class="podmeni">
+                    <li><a href="usluge.html#kategorija-b">Kategorija B</a></li>
+                    <li><a href="usluge.html#kategorija-c">Kategorija C</a></li>
+                    <li><a href="usluge.html#kategorija-d">Kategorija D</a></li>
+                    <li><a href="usluge.html#kategorija-a">Kategorija A</a></li>
+                </ul>
+            </li>
+            <li><a href="oNama.html">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bootstrap.html">Cenovnik</a></li>
+        </ul>
+
+        <div class="nav-desno">
+            <button id="dugme-jezik" onclick="promeniJezik()" style="background:none; border:1px solid rgba(255,255,255,0.4); 
+                color:#fff; padding:6px 14px; border-radius:6px; 
+                cursor:pointer; font-size:0.85rem;">
+                EN
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleMeni()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-razmak"></div>
+
+    <!-- HERO SLAJDER -->
+    <section class="hero">
+        <div class="slajd aktivan">
+            <img src="slike/slajder1.jpg" alt="Obuka vožnje">
+        </div>
+        <div class="slajd">
+            <img src="slike/slajder2.jpg" alt="Vozilo autoškole">
+        </div>
+        <div class="slajd">
+            <img src="slike/slajder3.jpg" alt="Instruktor i polaznik">
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-sadrzaj">
+            <h1 class="efekat-glow" data-kljuc="heroNaslov">Vozačka dozvola — korak do slobode</h1>
+            <p data-kljuc="heroPodnaslov">Profesionalna obuka vozača u Inđiji. Iskusni instruktori, moderna vozila,
+                visok procenat prolaznosti.</p>
+            <a href="kontakt.html" class="hero-dugme" data-kljuc="heroDugme">Prijavi se odmah</a>
+        </div>
+
+        <div class="slajder-strelice">
+            <button onclick="prethodniSlajd()">&#8592;</button>
+            <button onclick="sledeciSlajd()">&#8594;</button>
+        </div>
+
+        <div class="slajder-tacke" id="slajderTacke">
+            <span class="aktivna" onclick="idiNaSlajd(0)"></span>
+            <span onclick="idiNaSlajd(1)"></span>
+            <span onclick="idiNaSlajd(2)"></span>
+        </div>
+    </section>
+
+    <!-- ZAŠTO MI -->
+    <div class="kartica animacija-ulaz">
+        <div class="kartica-telo" style="text-align:center; padding: 36px 24px;">
+            <h3 data-kljuc="k1Naslov">Iskusni instruktori</h3>
+            <p data-kljuc="k1Tekst">Naši instruktori poseduju višegodišnje iskustvo i licencu za sve kategorije.</p>
+        </div>
+    </div>
+    <div class="kartica animacija-ulaz">
+        <div class="kartica-telo" style="text-align:center; padding: 36px 24px;">
+            <h3 data-kljuc="k2Naslov">Moderna vozila</h3>
+            <p data-kljuc="k2Tekst">Vozni park se redovno obnavlja — sva vozila su novije generacije i odlično
+                opremljena.</p>
+        </div>
+    </div>
+    <div class="kartica animacija-ulaz">
+        <div class="kartica-telo" style="text-align:center; padding: 36px 24px;">
+            <h3 data-kljuc="k3Naslov">Visok prolaz</h3>
+            <p data-kljuc="k3Tekst">Preko 92% naših polaznika položi ispit u prvom pokušaju zahvaljujući kvalitetnoj
+                pripremi.</p>
+        </div>
+    </div>
+    <div class="kartica animacija-ulaz">
+        <div class="kartica-telo" style="text-align:center; padding: 36px 24px;">
+            <h3 data-kljuc="k4Naslov">Povoljne cene</h3>
+            <p data-kljuc="k4Tekst">Transparentne cene bez skrivenih troškova. Mogućnost plaćanja na rate.</p>
+        </div>
+    </div>
+
+    <!-- VIDEO SEKCIJA -->
+    <section class="sekcija sekcija-siva animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2 data-kljuc="videoNaslov">Pogledaj kako izgleda obuka</h2>
+            <p data-kljuc="videoPodnaslov">Kratki pregled naše škole i načina rada</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="video-omotac">
+            <video controls poster="slike/video-korica.jpg">
+                <source src="video/promo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- YOUTUBE EMBED -->
+    <section class="sekcija animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2 data-kljuc="youtubeNaslov">Saveti za polaganje ispita</h2>
+            <p data-kljuc="youtubePodnaslov">Korisni video materijali za pripremu</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="video-omotac">
+            <iframe width="2381" height="977" src="https://www.youtube.com/embed/XYciFl8Cf70"
+                title="Auto skola &quot;Zeleno svetlo&quot; PROMO VIDEO" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+    <section class="sekcija sekcija-siva animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2 data-kljuc="mapaNaslov">Gde se nalazimo</h2>
+            <p data-kljuc="mapaPodnaslov">Posetite nas u Inđiji</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="video-omotac">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467.457035945067!2d20.070834907753174!3d45.055277194860345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475af8cbee25b8d1%3A0x6009dface9938cc3!2zTGnEjWthIDM2LCBJbsSRaWphIDIyMzIw!5e1!3m2!1sen!2srs!4v1779446740023!5m2!1sen!2srs"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- DOKUMENT LINK -->
+    <section class="sekcija animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2 data-kljuc="dokNaslov">Dokumenta i cenovnik</h2>
+            <p data-kljuc="dokPodnaslov">Preuzmite potrebna dokumenta</p>
+            <div class="linija"></div>
+        </div>
+
+        <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+            <a href="slike/cenovnik.pdf" class="hero-dugme" download>
+                Preuzmite cenovnik
+            </a>
+            <a href="slike/uputstvo.pdf" class="hero-dugme" style="background-color: var(--pozadina-kartica); 
+                      color: var(--tekst-glavni); 
+                      border: 2px solid var(--ivica);" download>
+                Uputstvo za polaznike
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-mreza">
+            <div>
+                <h4>Autoškola Uroš Pualić</h4>
+                <p>Profesionalna obuka vozača u Pančevu od 2003. godine.</p>
+            </div>
+            <div>
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="usluge.html">Kategorije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p> Lička 36 Inđija, Srbija</p>
+                <p> +381 62 207 736</p>
+                <p> info@autoskolapualic.rs</p>
+            </div>
+        </div>
+        <div class="footer-dno">
+            <p>© 2024 Autoškola Uroš Pualić. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteke/jquery-4.0.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jezik.js"></script>
+</body>
+
+</html>

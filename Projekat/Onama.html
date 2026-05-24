@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="sr" data-tema="svetla">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="O autoškoli Uroš Pualić u Inđiji — upoznajte naš tim instruktora i istorijat škole.">
+    <meta name="keywords" content="autoškola Inđija, Uroš Pualić, instruktori, obuka vozača, Lička 36">
+    <meta property="og:title" content="O nama — Autoškola Uroš Pualić">
+    <meta property="og:description" content="Upoznajte autoškolu Uroš Pualić. Osnovani 2003. godine u Inđiji.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sr_RS">
+    <title>O nama — Autoškola Uroš Pualić</title>
+    <link rel="icon" type="image/png" href="slike/ikonica.png">
+    <link rel="stylesheet" href="css/stil.css">
+    <link rel="stylesheet" href="biblioteke/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="pristupacnost-traka">
+        <button onclick="promeniTemu()" id="dugme-tema">Tamna tema</button>
+        <button onclick="povecajFont()">A+</button>
+        <button onclick="smanjiFont()">A-</button>
+    </div>
+
+    <nav class="navigacija">
+        <div class="logo">
+            <img src="slike/ikonica.png" alt="Logo autoškole Uroš Pualić">
+            <span>UROŠ PUALIĆ</span>
+        </div>
+
+        <ul class="nav-linkovi" id="navLinkovi">
+            <li><a href="index.html">Početna</a></li>
+            <li class="ima-podmeni">
+                <a href="usluge.html">Kategorije ▾</a>
+                <ul class="podmeni">
+                    <li><a href="usluge.html#kategorija-b">Kategorija B</a></li>
+                    <li><a href="usluge.html#kategorija-c">Kategorija C</a></li>
+                    <li><a href="usluge.html#kategorija-d">Kategorija D</a></li>
+                    <li><a href="usluge.html#kategorija-a">Kategorija A</a></li>
+                </ul>
+            </li>
+            <li><a href="oNama.html" class="aktivan">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bootstrap.html">Cenovnik</a></li>
+        </ul>
+
+        <div class="nav-desno">
+            <button id="dugme-jezik" onclick="promeniJezik()" style="background:none; border:1px solid rgba(255,255,255,0.4);
+                color:#fff; padding:6px 14px; border-radius:6px;
+                cursor:pointer; font-size:0.85rem;">
+                EN
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleMeni()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-razmak"></div>
+
+    <!-- HERO STRANICE -->
+    <section style="
+        background: linear-gradient(135deg, var(--pozadina-nav) 0%, #2d2d4e 100%);
+        padding: 80px 40px;
+        text-align: center;">
+        <h1 style="
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            color: #ffffff;
+            margin-bottom: 16px;" data-kljuc="oNamaNaslov">
+            O nama
+        </h1>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1.1rem;" data-kljuc="oNamaPodnaslov">
+            Upoznajte našu školu
+        </p>
+    </section>
+
+    <!-- NAŠA PRIČA -->
+    <section class="sekcija animacija-ulaz">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;">
+
+            <div class="efekat-slika">
+                <img src="slike/skola.jpg" alt="Zgrada autoškole Uroš Pualić u Inđiji">
+            </div>
+
+            <div>
+                <h2 style="font-size: 2.4rem; margin-bottom: 20px; color: var(--tekst-glavni);">Naša priča</h2>
+                <div class="linija" style="margin: 0 0 24px 0;"></div>
+                <p style="margin-bottom: 16px;">
+                    Autoškola Uroš Pualić osnovana je 2003. godine u Inđiji sa jednom misijom —
+                    osposobiti vozače koji su sigurni, odgovorni i samopouzdani na putu.
+                </p>
+                <p style="margin-bottom: 16px;">
+                    Tokom više od dvadeset godina rada, kroz naše vozačke kurseve prošle su
+                    hiljade polaznika. Ponosni smo na visok procenat prolaznosti i poverenje
+                    koje su nam ukazali stanovnici Inđije i okolnih mesta.
+                </p>
+                <p>
+                    Škola se nalazi na adresi Lička 36, Inđija, gde vas naš tim dočekuje
+                    svakog radnog dana.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BROJEVI -->
+    <section class="sekcija sekcija-siva animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2>Autoškola u brojevima</h2>
+            <div class="linija"></div>
+        </div>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;">
+
+            <div class="kartica animacija-ulaz" style="padding: 40px 20px;">
+                <div style="
+                    font-size: 3rem;
+                    font-family: 'Bebas Neue', cursive;
+                    color: var(--akcenat);
+                    line-height: 1;">
+                    20+
+                </div>
+                <p style="margin-top: 10px; font-weight: 700; color: var(--tekst-glavni);">
+                    godina iskustva
+                </p>
+            </div>
+
+            <div class="kartica animacija-ulaz" style="padding: 40px 20px;">
+                <div style="
+                    font-size: 3rem;
+                    font-family: 'Bebas Neue', cursive;
+                    color: var(--akcenat);
+                    line-height: 1;">
+                    5000+
+                </div>
+                <p style="margin-top: 10px; font-weight: 700; color: var(--tekst-glavni);">
+                    osposobljenih vozača
+                </p>
+            </div>
+
+            <div class="kartica animacija-ulaz" style="padding: 40px 20px;">
+                <div style="
+                    font-size: 3rem;
+                    font-family: 'Bebas Neue', cursive;
+                    color: var(--akcenat);
+                    line-height: 1;">
+                    92%
+                </div>
+                <p style="margin-top: 10px; font-weight: 700; color: var(--tekst-glavni);">
+                    prolaznost na ispitu
+                </p>
+            </div>
+
+            <div class="kartica animacija-ulaz" style="padding: 40px 20px;">
+                <div style="
+                    font-size: 3rem;
+                    font-family: 'Bebas Neue', cursive;
+                    color: var(--akcenat);
+                    line-height: 1;">
+                    4
+                </div>
+                <p style="margin-top: 10px; font-weight: 700; color: var(--tekst-glavni);">
+                    kategorije vozila
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIM INSTRUKTORA -->
+    <section class="sekcija animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2>Naš tim</h2>
+            <p>Upoznajte instruktore koji će vas voditi kroz obuku</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="kartice-mreza">
+            <div class="kartica animacija-ulaz">
+                <img src="slike/instruktor1.jpg" alt="Instruktor" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Uroš Pualić</h3>
+                    <p style="color: var(--akcenat); font-weight: 700; margin-bottom: 8px;">
+                        Osnivač i glavni instruktor
+                    </p>
+                    <p>Licenciran za kategorije B, C i D. Više od 20 godina iskustva u obuci vozača.</p>
+                </div>
+            </div>
+
+            <div class="kartica animacija-ulaz">
+                <img src="slike/instruktor2.jpg" alt="Instruktor" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Jovana Kovačević</h3>
+                    <p style="color: var(--akcenat); font-weight: 700; margin-bottom: 8px;">
+                        Instruktor vožnje
+                    </p>
+                    <p>Licencirana za kategorije A i B. Specijalizovan za rad sa početnicima.</p>
+                </div>
+            </div>
+
+            <div class="kartica animacija-ulaz">
+                <img src="slike/instruktor3.jpg" alt="Instruktor" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Strahinja Turudić</h3>
+                    <p style="color: var(--akcenat); font-weight: 700; margin-bottom: 8px;">
+                        Predavač iz propisa
+                    </p>
+                    <p>Sertifikovan predavač saobraćajnih propisa sa dugogodišnjim stažom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOZNI PARK -->
+    <section class="sekcija sekcija-siva animacija-ulaz">
+        <div class="sekcija-naslov">
+            <h2>Vozni park</h2>
+            <p>Moderna vozila za bezbedan i udoban trening</p>
+            <div class="linija"></div>
+        </div>
+
+        <div class="kartice-mreza">
+            <div class="kartica animacija-ulaz">
+                <!-- TVOJA SLIKA: fotografija vozila -->
+                <img src="slike/vozilo1.jpg" alt="Vozilo za kategoriju B" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Kategorija B</h3>
+                    <p>Volkswagen Golf — automatik i manuelni menjač dostupni.</p>
+                </div>
+            </div>
+
+            <div class="kartica animacija-ulaz">
+                <img src="slike/vozilo2.jpg" alt="Vozilo za kategoriju C" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Kategorija C</h3>
+                    <p>Kamion opremljen duplim komandama za bezbedan trening.</p>
+                </div>
+            </div>
+
+            <div class="kartica animacija-ulaz">
+                <img src="slike/vozilo3.jpg" alt="Motocikl za kategoriju A" class="kartica-slika">
+                <div class="kartica-telo">
+                    <h3>Kategorija A</h3>
+                    <p>Motocikli različitih kubikaza za sve nivoe iskustva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-mreza">
+            <div>
+                <h4>Autoškola Uroš Pualić</h4>
+                <p>Profesionalna obuka vozača u Inđiji od 2003. godine.</p>
+            </div>
+            <div>
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="usluge.html">Kategorije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Lička 36, Inđija</p>
+                <p>+381 62 207 736</p>
+                <p>info@autoskolapualic.rs</p>
+            </div>
+        </div>
+        <div class="footer-dno">
+            <p>© 2024 Autoškola Uroš Pualić. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteke/jquery-4.0.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jezik.js"></script>
+</body>
+
+</html>

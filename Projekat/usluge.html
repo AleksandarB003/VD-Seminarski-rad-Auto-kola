@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="sr" data-tema="svetla">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kategorije vozačkih dozvola — Autoškola Uroš Pualić Inđija. Kategorije A, B, C, D. Cene i uslovi obuke.">
+    <meta name="keywords"
+        content="kategorija B, kategorija C, kategorija D, kategorija A, vozačka dozvola, autoškola Inđija">
+    <meta property="og:title" content="Kategorije vozila — Autoškola Uroš Pualić">
+    <meta property="og:description" content="Obuka za kategorije B, C, D i A. Izaberite kategoriju koja vam odgovara.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="sr_RS">
+    <title>Kategorije — Autoškola Uroš Pualić</title>
+    <link rel="icon" type="image/png" href="slike/ikonica.png">
+    <link rel="stylesheet" href="css/stil.css">
+    <link rel="stylesheet" href="biblioteke/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="pristupacnost-traka">
+        <button onclick="promeniTemu()" id="dugme-tema">Tamna tema</button>
+        <button onclick="povecajFont()">A+</button>
+        <button onclick="smanjiFont()">A-</button>
+    </div>
+
+    <nav class="navigacija">
+        <div class="logo">
+            <img src="slike/ikonica.png" alt="Logo autoškole Uroš Pualić">
+            <span>UROŠ PUALIĆ</span>
+        </div>
+
+        <ul class="nav-linkovi" id="navLinkovi">
+            <li><a href="index.html">Početna</a></li>
+            <li class="ima-podmeni">
+                <a href="usluge.html" class="aktivan">Kategorije ▾</a>
+                <ul class="podmeni">
+                    <li><a href="usluge.html#kategorija-b">Kategorija B</a></li>
+                    <li><a href="usluge.html#kategorija-c">Kategorija C</a></li>
+                    <li><a href="usluge.html#kategorija-d">Kategorija D</a></li>
+                    <li><a href="usluge.html#kategorija-a">Kategorija A</a></li>
+                </ul>
+            </li>
+            <li><a href="oNama.html">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="bootstrap.html">Cenovnik</a></li>
+        </ul>
+
+        <div class="nav-desno">
+            <button id="dugme-jezik" onclick="promeniJezik()" style="background:none; border:1px solid rgba(255,255,255,0.4);
+                color:#fff; padding:6px 14px; border-radius:6px;
+                cursor:pointer; font-size:0.85rem;">
+                EN
+            </button>
+            <button class="hamburger" id="hamburger" onclick="toggleMeni()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-razmak"></div>
+
+    <!-- HERO STRANICE -->
+    <section style="
+        background: linear-gradient(135deg, var(--pozadina-nav) 0%, #2d2d4e 100%);
+        padding: 80px 40px;
+        text-align: center;">
+        <h1 style="font-size: clamp(2.4rem, 5vw, 4rem); color: #ffffff; margin-bottom: 16px;" data-kljuc="uslugaNaslov">
+            Naše kategorije
+        </h1>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1.1rem;" data-kljuc="uslugaPodnaslov">
+            Izaberite kategoriju koja vam odgovara
+        </p>
+    </section>
+
+    <!-- KATEGORIJA B -->
+    <section class="sekcija animacija-ulaz" id="kategorija-b">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;">
+
+            <div>
+                <div style="
+                    display: inline-block;
+                    background-color: var(--akcenat);
+                    color: #ffffff;
+                    font-family: 'Bebas Neue', cursive;
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    margin-bottom: 16px;">
+                    NAJTRAŽENIJA
+                </div>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: var(--tekst-glavni);">Kategorija B</h2>
+                <div class="linija" style="margin: 0 0 24px 0;"></div>
+                <p style="margin-bottom: 14px;">
+                    Kategorija B obuhvata upravljanje putničkim automobilima do 3.500 kg.
+                    Najtraženija kategorija — uslov za većinu vozačkih dozvola višeg ranga.
+                </p>
+                <p style="margin-bottom: 24px;">
+                    Obuka se sastoji od teorijskog dela (propisi i prva pomoć) i praktičnog
+                    dela (vožnja u saobraćaju). Minimalan broj časova vožnje je 40.
+                </p>
+
+                <div style="
+                    background-color: var(--pozadina-kartica);
+                    border: 1px solid var(--ivica);
+                    border-radius: 12px;
+                    padding: 24px;
+                    margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Minimalna starost</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">17 godina</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Trajanje obuke</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">2–3 meseca</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Časovi vožnje</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">min. 40 časova
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Cena kursa</p>
+                            <p style="font-weight: 700; color: var(--akcenat); font-size: 1.1rem;">od 110.000 RSD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="kontakt.html" class="hero-dugme">Prijavi se</a>
+            </div>
+
+            <div class="efekat-slika">
+                <img src="slike/kategorija-b.jpg" alt="Obuka za kategoriju B">
+            </div>
+        </div>
+    </section>
+
+    <!-- KATEGORIJA C -->
+    <section class="sekcija sekcija-siva animacija-ulaz" id="kategorija-c">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;">
+
+            <div class="efekat-slika">
+                <img src="slike/kategorija-c.jpg" alt="Obuka za kategoriju C">
+            </div>
+
+            <div>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: var(--tekst-glavni);">Kategorija C</h2>
+                <div class="linija" style="margin: 0 0 24px 0;"></div>
+                <p style="margin-bottom: 14px;">
+                    Kategorija C omogućava upravljanje teretnim vozilima čija masa prelazi 3.500 kg.
+                    Neophodna za profesionalne vozače i transport robe.
+                </p>
+                <p style="margin-bottom: 24px;">
+                    Uslov za polaganje je posedovanje vozačke dozvole B kategorije.
+                    Obuka se odvija na modernom kamionu opremljenom duplim komandama.
+                </p>
+
+                <div style="
+                    background-color: var(--pozadina-kartica);
+                    border: 1px solid var(--ivica);
+                    border-radius: 12px;
+                    padding: 24px;
+                    margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Minimalna starost</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">21 godina</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Uslov</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">Kategorija B</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Trajanje obuke</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">1–2 meseca</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Cena kursa</p>
+                            <p style="font-weight: 700; color: var(--akcenat); font-size: 1.1rem;">od 90.000 RSD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="kontakt.html" class="hero-dugme">Prijavi se</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATEGORIJA D -->
+    <section class="sekcija animacija-ulaz" id="kategorija-d">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;">
+
+            <div>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: var(--tekst-glavni);">Kategorija D</h2>
+                <div class="linija" style="margin: 0 0 24px 0;"></div>
+                <p style="margin-bottom: 14px;">
+                    Kategorija D obuhvata upravljanje autobusima i vozilima za prevoz putnika
+                    sa više od osam mesta. Neophodna za profesionalne vozače u javnom prevozu.
+                </p>
+                <p style="margin-bottom: 24px;">
+                    Obuka podrazumeva savladavanje tehnike upravljanja velikim vozilom,
+                    bezbednog prevoza putnika i ponašanja u vanrednim situacijama.
+                </p>
+
+                <div style="
+                    background-color: var(--pozadina-kartica);
+                    border: 1px solid var(--ivica);
+                    border-radius: 12px;
+                    padding: 24px;
+                    margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Minimalna starost</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">24 godine</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Uslov</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">Kategorija B</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Trajanje obuke</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">2–3 meseca</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Cena kursa</p>
+                            <p style="font-weight: 700; color: var(--akcenat); font-size: 1.1rem;">od 75.000 RSD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="kontakt.html" class="hero-dugme">Prijavi se</a>
+            </div>
+
+            <div class="efekat-slika">
+                <img src="slike/kategorija-d.jpg" alt="Obuka za kategoriju D">
+            </div>
+        </div>
+    </section>
+
+    <!-- KATEGORIJA A -->
+    <section class="sekcija sekcija-siva animacija-ulaz" id="kategorija-a">
+        <div style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: center;">
+
+            <div class="efekat-slika">
+                <img src="slike/kategorija-a.jpg" alt="Obuka za kategoriju A">
+            </div>
+
+            <div>
+                <h2 style="font-size: 2.8rem; margin-bottom: 16px; color: var(--tekst-glavni);">Kategorija A</h2>
+                <div class="linija" style="margin: 0 0 24px 0;"></div>
+                <p style="margin-bottom: 14px;">
+                    Kategorija A obuhvata upravljanje motociklima bez ograničenja snage motora.
+                    Obuka se odvija na poligonu i u saobraćaju uz pratnju instruktora.
+                </p>
+                <p style="margin-bottom: 24px;">
+                    Postoji i kategorija A2 za motocikle ograničene snage, dostupna od 18 godina
+                    bez prethodne vozačke dozvole.
+                </p>
+
+                <div style="
+                    background-color: var(--pozadina-kartica);
+                    border: 1px solid var(--ivica);
+                    border-radius: 12px;
+                    padding: 24px;
+                    margin-bottom: 24px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Minimalna starost</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">24 godine</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Kategorija A2</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">od 18 godina</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Trajanje obuke</p>
+                            <p style="font-weight: 700; color: var(--tekst-glavni); font-size: 1.1rem;">1–2 meseca</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.85rem; color: var(--tekst-sivi);">Cena kursa</p>
+                            <p style="font-weight: 700; color: var(--akcenat); font-size: 1.1rem;">od 35.000 RSD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="kontakt.html" class="hero-dugme">Prijavi se</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POZIV NA AKCIJU -->
+    <section class="sekcija animacija-ulaz" style="text-align: center;">
+        <div style="
+            max-width: 680px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--pozadina-nav) 0%, #2d2d4e 100%);
+            border-radius: 20px;
+            padding: 56px 40px;">
+            <h2 style="color: #ffffff; font-size: 2.4rem; margin-bottom: 16px;">
+                Spreman za vozačku?
+            </h2>
+            <p style="color: rgba(255,255,255,0.75); margin-bottom: 32px; font-size: 1.05rem;">
+                Kontaktiraj nas i zajedno ćemo izabrati termin koji tebi odgovara.
+            </p>
+            <a href="kontakt.html" class="hero-dugme">Kontaktiraj nas</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-mreza">
+            <div>
+                <h4>Autoškola Uroš Pualić</h4>
+                <p>Profesionalna obuka vozača u Inđiji od 2003. godine.</p>
+            </div>
+            <div>
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="oNama.html">O nama</a></li>
+                    <li><a href="usluge.html">Kategorije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>Lička 36, Inđija</p>
+                <p>+381 62 207 736</p>
+                <p>info@autoskolapualic.rs</p>
+            </div>
+        </div>
+        <div class="footer-dno">
+            <p>© 2024 Autoškola Uroš Pualić. Sva prava zadržana.</p>
+        </div>
+    </footer>
+
+    <script src="biblioteke/jquery-4.0.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jezik.js"></script>
+</body>
+
+</html>
