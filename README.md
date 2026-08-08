@@ -1,4 +1,4 @@
-# Autoškola Uroš Pualić — Seminarski rad
+# Autoškola Uroš Pualić - Seminarski rad
 
 Seminarski rad iz predmeta Veb Dizajn.
 
@@ -13,12 +13,12 @@ Veb sajt autoškole Uroš Pualić iz Inđije. Sajt prikazuje usluge autoškole, 
 - React (Vite)
 
 ## Struktura projekta
-- index.html — Početna stranica
-- Onama.html — O nama
-- usluge.html — Kategorije vozila
-- kontakt.html — Kontakt forma
-- bootstrap.html — Cenovnik (Bootstrap)
-- react/ — React aplikacija sa 2 stranice
+- index.html - Početna stranica
+- Onama.html - O nama
+- usluge.html - Kategorije vozila
+- kontakt.html - Kontakt forma
+- bootstrap.html - Cenovnik (Bootstrap)
+- react/ - React aplikacija sa 2 stranice
 
 ## Funkcionalnosti
 - Svetla i tamna tema
