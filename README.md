@@ -39,4 +39,4 @@ npm install
 npm run dev
 
 ## Link
-https://emperorapocalypse.github.io/VD-Seminarski-rad-Auto-kola/Projekat/
+https://AleksandarB003.github.io/VD-Seminarski-rad-Auto-kola/Projekat/
